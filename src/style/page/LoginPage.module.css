@@ -1,0 +1,162 @@
+.backgroundContainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FBE0E6;
+}
+
+.mainContainer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.sideContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 15%;
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.sideContainerOff {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 15%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 12%;
+    background-color: rgba(255, 255, 255, 0.85);
+    height: 550px;
+    width: 550px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    transition: right 1.4s ease-in-out; /* right 속성에 대한 트랜지션 효과 추가 */
+
+    /* font 공통 */
+    font-family: SharpSans, SharpSans Accents, SharpSans Symbols arial,sans-serif;
+}
+
+.loginContainerOff {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: calc(50% - 275px);
+    background-color: rgba(255, 255, 255, 0.85);
+    height: 550px;
+    width: 550px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    transition: right 1.4s ease-in-out; /* right 속성에 대한 트랜지션 효과 추가 */
+
+    /* font 공통 */
+    font-family: SharpSans, SharpSans Accents, SharpSans Symbols arial,sans-serif;
+}
+
+.loginInput {
+    border: 1px solid #000000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 52px;
+    width: 440px;
+    box-sizing: border-box;
+    padding-inline: 20px;
+    font-size: 26px;
+    color: black;
+}
+
+.normalBtn {
+    /* background-color: #18494D; */
+    background-color: #FBE0E6;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    height: 52px;
+    width: 440px;
+    font-size: 26px;
+    color: black;
+    cursor: pointer;
+    border: none;
+}
+
+.normalBtn:hover {
+    background-color: #F15074;
+}
+
+.loginLabel {
+    /* color: #18494D; */
+    color: #F15073;
+    font-weight: bold;
+    font-size: 24px;
+    padding-top: 12px;
+}
+
+.mainTitle {
+    /* color: #18494D; */
+    color: #F15073;
+    font-weight: bold;
+    font-size: 120px;
+}
+
+.siTitle {
+    position: relative;
+    /* color: #18494D; */
+    color: #F15073;
+    font-weight: bold;
+    font-size: 38px;
+    bottom: 24px;
+}
+
+.title {
+    /* color: #18494D; */
+    color: #F15073;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.icon {
+    height: 120px;
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.linkContainer {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-right: 100px;
+}
+
+.linkLabel {
+    cursor: pointer;
+    padding-inline: 5px;
+    font-size: 16px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    color: black;
+}
+
+.linkLabel:hover {
+    /* color: #18494D; */
+    color: #F15073;
+    font-weight: bold;
+}
