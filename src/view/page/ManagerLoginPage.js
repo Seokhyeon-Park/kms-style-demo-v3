@@ -43,12 +43,11 @@ function ManagerLoginPage() {
     return (
         <div className={style.backgroundContainer}>
             <div className={style.mainContainer}>
-                <div className={windowWidth > 1550?style.sideContainer:style.sideContainerOff}>
+                <div className={windowWidth > 1650?style.sideContainer:style.sideContainerOff}>
                     <label className={style.mainTitle}>StupidPigs</label>
                     <label className={style.siTitle}>Platform</label>
                 </div>
-                <div className={windowWidth > 1550?style.loginContainer:style.loginContainerOff}>
-                    <img src="./img/pig.png" className={style.icon} />
+                <div className={windowWidth > 1650?style.loginContainer:style.loginContainerOff}>
                     <label className={style.loginLabel}>관리자 이메일</label>
                     <input
                         type="text"
