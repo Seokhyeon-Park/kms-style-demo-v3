@@ -1,6 +1,7 @@
 import style from '../../style/./page/LoginPage.module.css'
 import React, {useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function LoginPage() {
     // Actions
@@ -36,7 +37,46 @@ function LoginPage() {
     const setInputEmail = (e) => { setEmail(e.target.value); }
     const setInputPhoneNumber = (e) => { setPhoneNumber(e.target.value); }
 
-    const handleSignUpClick = () => { setIsSignUp(true); }
+    const handleSignUpClick = () => { setIsSignUp(!isSignUp); }
+
+    // Functions
+    const toLoginPage = () => { handleSignUpClick(); }
+    const toMainPage = () => { navigate('/main'); }
+
+    const enterKeyEvent = (e) => {
+        if(e.key === 'Enter') { login(); }
+    }
+
+    const login = async () => {
+        toMainPage();
+        
+        return;
+
+        // 하단 코드 참고
+        try {
+            const response = await axios.post(
+                'http://localhost:8080/api/user/signIn',
+                {
+                    'username': id,
+                    'password': password
+                }
+            );
+
+            if(response.status === 200) {
+                if(response.data.res_code === '0000') {
+                    // SignIn Success
+
+                    toMainPage();
+                } else {
+                    // SignIn Failure
+                }
+            } else {
+                // Response Failure
+            }
+        } catch (error) {
+            // Error
+        }
+    }
 
     return (
         <div className={style.backgroundContainer}>
@@ -73,7 +113,7 @@ function LoginPage() {
                                 className={style.loginInput}
                                 placeholder="Password"
                                 value={chkPassword}
-                                onChange={setChkPassword}
+                                onChange={setInputChkPw}
                             />
                             <label className={style.loginLabel}>성함</label>
                             <input
@@ -111,7 +151,7 @@ function LoginPage() {
                                 value={company}
                                 onChange={setInputCompany}
                             />
-                            <button type="submit" className={style.normalBtn}>
+                            <button type="submit" className={style.normalBtn} onClick={toLoginPage}>
                                 회원가입
                             </button>
                         </>
@@ -125,6 +165,7 @@ function LoginPage() {
                                 placeholder="ID"
                                 value={id}
                                 onChange={setInputId}
+                                onKeyDown={enterKeyEvent}
                             />
                             <label className={style.loginLabel}>패스워드</label>
                             <input
@@ -134,11 +175,12 @@ function LoginPage() {
                                 placeholder="Password"
                                 value={password}
                                 onChange={setInputPw}
+                                onKeyDown={enterKeyEvent}
                             />
                             <div className={style.linkContainer}>
                                 <label className={style.linkLabel} onClick={handleSignUpClick}>계정신청</label>
                             </div>
-                            <button type="submit" className={style.normalBtn}>
+                            <button type="submit" className={style.normalBtn} onClick={toMainPage}>
                                 로그인
                             </button>
                         </>

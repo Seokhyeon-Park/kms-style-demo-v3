@@ -2,15 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import {RouterProvider} from "react-router";
 import {BrowserRouter, createBrowserRouter} from 'react-router-dom';
 import LoginPage from "./view/./page/LoginPage";
-import {RouterProvider} from "react-router";
+import MainPage from './view/page/MainPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
   {
     path: "/",
     element: <LoginPage />,
+    // errorElement: <ErrorPage />,
+  },
+  {
+    path: "/main",
+    element: <MainPage />,
     // errorElement: <ErrorPage />,
   },
 ]);

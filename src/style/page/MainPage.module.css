@@ -1,0 +1,81 @@
+/* 072541 블랙 */
+/* f79aaf 찐핑 */
+/* FBE0E6 핑크 */
+/* ffffff6b 반투명 화이트 */
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #FBE0E6;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  box-sizing: border-box;
+  padding-inline: 10px;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  background-color: #ffffff6b;
+}
+
+.containerRow {
+  display: flex;
+  max-height: 345px;
+  max-height: 690px;
+}
+
+.boxStyle {
+  background-color: #ffffff6b;
+  box-sizing: border-box;
+  border-radius: 15px;
+  margin: 15px;
+
+  min-height: 330px;
+  max-height: 330px;
+
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.boxStyle:hover {
+  transform: scale(1.05);
+}
+
+.normalSizeBox {
+  min-width: 330px;
+  max-width: 330px;
+}
+
+.bigSizeBox {
+  min-width: 660px;
+  max-width: 660px;
+}
+
+.miniSizeProfile {
+  border-radius: 45px;
+  height: 45px;
+  width: 45px;
+}
+
+.bigSizeProfile {
+  border-radius: 185px;
+  height: 185px;
+  width: 185px;
+}
+
+.normalFont {
+  font-size: 28px;
+  font-weight: bold;
+  color: #072541;
+}
