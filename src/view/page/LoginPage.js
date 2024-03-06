@@ -52,7 +52,9 @@ function LoginPage() {
         
         return;
 
-        // 하단 코드 참고
+        /**
+         * 승호1. 하단 만들기
+         */
         try {
             const response = await axios.post(
                 'http://localhost:8080/api/user/signIn',
@@ -76,6 +78,13 @@ function LoginPage() {
         } catch (error) {
             // Error
         }
+    }
+
+    /**
+     * 승호2. 회원가입 만들기
+     */
+    const signUp = async () => {
+
     }
 
     return (
