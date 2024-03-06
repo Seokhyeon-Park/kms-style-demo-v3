@@ -1,3 +1,7 @@
+/* 072541 블랙 */
+/* f79aaf 찐핑 */
+/* FBE0E6 핑크 */
+
 .backgroundContainer {
     position: absolute;
     height: 100%;
@@ -21,7 +25,7 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: 15%;
+    left: 17%;
     opacity: 1;
     transition: opacity 0.8s ease-in-out;
 }
@@ -32,7 +36,7 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: 15%;
+    left: 17%;
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
 }
@@ -43,13 +47,13 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: 12%;
+    right: 14%;
     background-color: rgba(255, 255, 255, 0.85);
-    height: 400px;
-    width: 550px;
+    height: 320px;
+    width: 480px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
     overflow: hidden;
-    transition: right 1.4s ease-in-out; /* right 속성에 대한 트랜지션 효과 추가 */
+    transition: right 1.4s ease-in-out, height 0.4s ease-in-out;
 
     /* font 공통 */
     font-family: SharpSans, SharpSans Accents, SharpSans Symbols arial,sans-serif;
@@ -63,72 +67,77 @@
     position: absolute;
     right: calc(50% - 275px);
     background-color: rgba(255, 255, 255, 0.85);
-    height: 400px;
-    width: 550px;
+    height: 320px;
+    width: 480px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
     overflow: hidden;
-    transition: right 1.4s ease-in-out; /* right 속성에 대한 트랜지션 효과 추가 */
+    transition: right 1.4s ease-in-out, height 0.4s ease-in-out;
 
     /* font 공통 */
     font-family: SharpSans, SharpSans Accents, SharpSans Symbols arial,sans-serif;
+}
+
+.loginContainer.active {
+    height: 770px;
+}
+
+.loginContainerOff.active {
+    height: 770px;
 }
 
 .loginInput {
     border: 1px solid #000000;
     margin-top: 10px;
     margin-bottom: 10px;
-    height: 52px;
-    width: 440px;
+    min-height: 40px;
+    width: 360px;
     box-sizing: border-box;
     padding-inline: 20px;
-    font-size: 26px;
+    font-size: 21px;
     color: black;
 }
 
 .normalBtn {
-    /* background-color: #18494D; */
     background-color: #FBE0E6;
     margin-top: 12px;
     margin-bottom: 10px;
-    height: 52px;
-    width: 440px;
-    font-size: 26px;
-    color: black;
+    min-height: 40px;
+    width: 360px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #072541;
     cursor: pointer;
     border: none;
 }
 
 .normalBtn:hover {
-    background-color: #F15074;
+    background-color: #072541;
+    color: white;
 }
 
 .loginLabel {
-    /* color: #18494D; */
-    color: #F15073;
+    color: #072541;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 18px;
     padding-top: 12px;
 }
 
 .mainTitle {
-    /* color: #18494D; */
-    color: #F15073;
+    color: #072541;
     font-weight: bold;
-    font-size: 120px;
+    font-size: 130px;
 }
 
 .siTitle {
     position: relative;
-    /* color: #18494D; */
-    color: #F15073;
+    color: #072541;
     font-weight: bold;
     font-size: 38px;
     bottom: 24px;
 }
 
 .title {
-    /* color: #18494D; */
-    color: #F15073;
+    color: #f79aaf;
     font-weight: bold;
     font-size: 36px;
 }
@@ -143,20 +152,24 @@
     width: 100%;
     display: flex;
     justify-content: end;
-    padding-right: 100px;
+    padding-right: 110px;
 }
 
 .linkLabel {
     cursor: pointer;
     padding-inline: 5px;
     font-size: 16px;
-    padding-bottom: 10px;
-    font-weight: 500;
-    color: black;
+    font-weight: bold;
+    color: #072541;
+    font-weight: bold;
 }
 
 .linkLabel:hover {
-    /* color: #18494D; */
-    color: #F15073;
+    color: black;
     font-weight: bold;
+}
+
+.Logo {
+    height: 120px;
+    margin-top: 10px;
 }

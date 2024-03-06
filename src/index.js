@@ -4,8 +4,6 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, createBrowserRouter} from 'react-router-dom';
 import LoginPage from "./view/./page/LoginPage";
-import ManagerLoginPage from "./view/./page/ManagerLoginPage";
-import ManagementPage from "./view/./page/ManagementPage";
 import {RouterProvider} from "react-router";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,16 +11,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <LoginPage />,
-    // errorElement: <ErrorPage />,
-  },
-  {
-    path: "/manager",
-    element: <ManagerLoginPage />,
-    // errorElement: <ErrorPage />,
-  },
-  {
-    path: "/management",
-    element: <ManagementPage />,
     // errorElement: <ErrorPage />,
   },
 ]);
